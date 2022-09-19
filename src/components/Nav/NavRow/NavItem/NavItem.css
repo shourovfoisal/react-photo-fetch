@@ -1,0 +1,32 @@
+.navItem {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.navItemLabel {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.imageDiv {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  position: relative;
+}
+
+.navItemImage {
+  max-width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

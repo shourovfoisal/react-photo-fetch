@@ -1,0 +1,15 @@
+.myRow {
+  width: 100%;
+  padding: 0 80px;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.myRow:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.textDark {
+  color: #222;
+}
