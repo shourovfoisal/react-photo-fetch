@@ -7,7 +7,6 @@ export const imageSlice = createSlice({
   },
   reducers: {
     addImages: (state, action) => {
-      console.log(action.payload);
       state.fetchedImages = [
         ...state.fetchedImages,
         { key: action.payload.key, images: action.payload.images },
