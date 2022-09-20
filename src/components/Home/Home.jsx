@@ -27,8 +27,7 @@ export default function Home() {
         `https://api.pexels.com/v1/search?query=${item}`,
         {
           headers: {
-            Authorization:
-              "563492ad6f917000010000017cfa525ceed047f6b9b240d830ab5f0f",
+            Authorization: `${process.env.REACT_APP_PEXELS_KEY}`,
           },
         }
       );
