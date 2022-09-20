@@ -20,6 +20,8 @@ export default function Home() {
     mainArray = [...imageArray2, ...imageArray1];
   }
 
+  console.log(process.env);
+
   const dispatch = useDispatch();
   const handleFetch = async (item = "cat") => {
     try {
