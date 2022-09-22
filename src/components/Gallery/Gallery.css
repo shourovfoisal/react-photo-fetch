@@ -78,6 +78,8 @@
 /* Caption Section */
 
 .captionCard {
+  width: 100%;
+  min-height: 160px;
   position: absolute;
   top: 100%;
   opacity: 0;

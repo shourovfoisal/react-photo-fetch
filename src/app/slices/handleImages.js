@@ -12,8 +12,14 @@ export const imageSlice = createSlice({
         { key: action.payload.key, images: action.payload.images },
       ];
     },
+    removeImages: (state, action) => {
+      const newArray = state.fetchedImages.filter(
+        (image) => image.key !== action.payload.key
+      );
+      state.fetchedImages = newArray;
+    },
   },
 });
 
-export const { addImages } = imageSlice.actions;
+export const { addImages, removeImages } = imageSlice.actions;
 export default imageSlice.reducer;
