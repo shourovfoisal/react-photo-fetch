@@ -14,11 +14,12 @@ const ExpandOverlay = ({ image, alt }) => {
       <button className="closeButton">
         <ion-icon name="close-outline"></ion-icon>
       </button>
-      <div
-        className="expandImageBox"
-        onClick={(event) => event.stopPropagation()}
-      >
-        <img src={image} alt={alt} />
+      <div className="expandImageBox">
+        <img
+          src={image}
+          alt={alt}
+          onClick={(event) => event.stopPropagation()}
+        />
       </div>
     </div>
   );
