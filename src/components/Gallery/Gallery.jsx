@@ -1,23 +1,51 @@
+import { useDispatch } from "react-redux";
+import { setExpandImage } from "../../app/slices/expandImage";
 import { publicPathGenerator } from "../../lib/publicPath";
 import "../../Utils.css";
 import "./Gallery.css";
 
 export default function Gallery({ items }) {
-  console.log(items);
+  const dispatch = useDispatch();
+
+  const handleExpand = (e) => {
+    // this function shows the high resolution image
+    const imageType = e.target.parentElement.parentElement.dataset.imageType;
+    const imageId = e.target.parentElement.parentElement.dataset.imageId;
+    items.forEach((item) => {
+      if (item.key === imageType) {
+        const images = item.images;
+        images.forEach((image) => {
+          if (image.id.toString() === imageId) {
+            dispatch(
+              setExpandImage({
+                imageLink: image.src.original,
+                imageAlt: image.alt,
+              })
+            );
+          }
+        });
+      }
+    });
+  };
+
   return (
     <div className="imageGallery">
       {items.map((item) =>
         item.images.map((image, index) => (
-          // <img src={image.src.tiny} alt="" />
           <div
             key={image.id}
             className="imageBox fadeIn"
             style={{ animationDelay: `${(index % 10) * 0.1}s` }}
+            data-image-type={item.key}
+            data-image-id={image.id}
           >
             <div className="imageHolder">
               <img src={image.src.tiny} alt={image.alt} />
             </div>
-            <div className="expandButton">
+            <div
+              className="expandButton"
+              onClick={(event) => handleExpand(event)}
+            >
               <ion-icon name="expand-outline"></ion-icon>
             </div>
             <div className="captionCard">
@@ -49,11 +77,4 @@ export default function Gallery({ items }) {
       )}
     </div>
   );
-  // <>
-  //   {children.length > 0 ? (
-  //     <div className="imageGallery">{children}</div>
-  //   ) : (
-  //     <div className="noImages textDark">Please select an item.</div>
-  //   )}
-  // </>
 }
