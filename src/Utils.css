@@ -2,12 +2,25 @@
   width: 100%;
   padding: 0 80px;
 
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 .myRow:not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 912px) {
+  .myRow {
+    padding: 0;
+  }
+}
+/* Galaxy S8+ */
+@media screen and (max-width: 360px) {
+  .myRow {
+    gap: 7px;
+  }
 }
 
 .textDark {

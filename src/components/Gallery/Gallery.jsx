@@ -39,9 +39,7 @@ export default function Gallery({ items }) {
             data-image-type={item.key}
             data-image-id={image.id}
           >
-            <div className="imageHolder">
-              <img src={image.src.tiny} alt={image.alt} />
-            </div>
+            <img src={image.src.medium} alt={image.alt} />
             <div
               className="expandButton"
               onClick={(event) => handleExpand(event)}

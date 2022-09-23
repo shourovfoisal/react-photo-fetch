@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 // import { addItem, removeItem } from "../../../../app/slices/navItems";
-import "./NavItem.css";
 import "../../../../Utils.css";
+import "./NavItem.css";
 import axios from "axios";
 import { addImages, removeImages } from "../../../../app/slices/handleImages";
 
