@@ -1,3 +1,7 @@
 .home {
   position: relative;
 }
+
+.noImages {
+  user-select: none;
+}

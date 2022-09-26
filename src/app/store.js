@@ -1,12 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
-import navItemsReducer from "./slices/navItems";
-import imagesReducer from "./slices/handleImages";
-import expandImageReducer from "./slices/expandImage";
+import navItems from "./slices/navItems";
+import images from "./slices/handleImages";
+import expandImage from "./slices/expandImage";
+import darkMode from "./slices/darkMode";
+import screenDim from "./slices/ScrenDim";
 
 export default configureStore({
   reducer: {
-    navItems: navItemsReducer,
-    images: imagesReducer,
-    expandImage: expandImageReducer,
+    navItems,
+    images,
+    expandImage,
+    darkMode,
+    screenDim,
   },
 });

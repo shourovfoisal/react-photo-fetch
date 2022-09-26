@@ -19,7 +19,7 @@ const ScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div id="scrollToTop" onClick={() => handleScroll()}>
+    <div id="scrollToTop" onClick={handleScroll}>
       <ion-icon name="chevron-up-outline"></ion-icon>
     </div>
   );

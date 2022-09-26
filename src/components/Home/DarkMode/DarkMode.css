@@ -1,0 +1,20 @@
+#darkModeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: fit-content; */
+}
+
+#darkModeBox {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(244, 164, 96, 0.8);
+  padding: 10px;
+  color: sandybrown;
+  font-size: 25px;
+  display: flex;
+  cursor: pointer;
+}
+
+#dimRangeSlider {
+  margin-left: 20px;
+}
